@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Conversor de Divisas</title>
+</head>
+
+<body>
+
+    <img src="./images/conversor-icon.png" alt="" class="conversor-imagen animate__animated animate__flipInY animate__slow">
+    <h1>Conversor de Divisas</h1>
+    <p>Escoje la moneda y la cantidad para realizar la conversión</p>
+
+    <div class="container">
+        <div class="moneda">
+            <select id="moneda-uno">
+                <option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD" selected>USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
+            </select>
+
+            <input type="number" id="cantidad-uno" placeholder="0" value="1">
+        </div>
+
+        <div class="taza-cambio-container">
+            <button class="btn" id="taza">
+                Cambiar <img src="./images/flechaDoble-icon.png" width="12px" alt="">
+            </button>
+
+            <div class="cambio" id="cambio">
+
+            </div>
+        </div>
+
+        <div class="moneda">
+            <select id="moneda-dos">
+                <option value="AED">AED</option>
+                <option value="ARS" selected>ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
+            </select>
+
+            <input type="number" id="cantidad-dos" placeholder="0" value="1">
+        </div>
+    </div>
+
+    <div>
+        <h2 class="listado">Listado de Monedas</h2>
+        <ul class="descripcion-moneda">
+            <div>
+                <div>
+                    <li>AED (Dírham de los Emiratos Árabes Unidos)</li>
+                    <li>ARS (Peso Argentino)</li>
+                    <li>AUD (Dólar australiano)</li>
+                    <li>BGN (Leva búlgara)</li>
+                </div>
+
+                <div>
+                    <li>BRL (Real brasileño)</li>
+                    <li>BSD (Dólar bahameño)</li>
+                    <li>CAD (Dólar canadiense)</li>
+                    <li>CHF (Franco suizo)</li>
+                </div>
+
+                <div>
+                    <li>CLP (Peso chileno)</li>
+                    <li>CNY (Yuan)</li>
+                    <li>COP (Peso colombiano)</li>
+                    <li>CZK (Corona checa)</li>
+                </div>
+
+                <div>
+                    <li>DKK (Corona danesa)</li>
+                    <li>DOP (Peso dominicano)</li>
+                    <li>EGP (Libra egipcia)</li>
+                    <li>EUR (Euro)</li>
+                </div>
+            </div>
+            <br>
+            <div>
+
+                <div>
+                    <li>FJD (Dólar fiyiano)</li>
+                    <li>GBP (Libra esterlina)</li>
+                    <li>GTQ (Quetzal guatemalteco)</li>
+                    <li>HKD (Dólar hongkonés)</li>
+                </div>
+
+                <div>
+                    <li>HRK (Kuna)</li>
+                    <li>HUF (Forinto húngaro)</li>
+                    <li>IDR (Rupia indonesia)</li>
+                    <li>ILS (Nuevo Séquel israelí)</li>
+                </div>
+
+                <div>
+                    <li>INR (Rupia india)</li>
+                    <li>ISK (Corona islandesa)</li>
+                    <li>JPY (Yen)</li>
+                    <li>KRW (Won surcoreano)</li>
+                </div>
+
+                <div>
+                    <li>KZT (Tengue kazajo)</li>
+                    <li>MXN (Peso mexicano)</li>
+                    <li>MYR (Ringit )</li>
+                    <li>NOK (Corona noruega)</li>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <div>
+                    <li>NZD (Dólar neozelandés)</li>
+                    <li>PAB (Balboa panameño)</li>
+                    <li>PEN (Sol peruano)</li>
+                    <li>PHP (Peso filipino)</li>
+                </div>
+
+                <div>
+                    <li>PKR (Rupia pakistaní)</li>
+                    <li>PLN (Esloti)</li>
+                    <li>PYG (Guaraní paraguayo)</li>
+                    <li>RON (Leu rumano)</li>
+                </div>
+
+                <div>
+                    <li>RUB (Rublo ruso)</li>
+                    <li>SAR (Riyal saudí)</li>
+                    <li>SEK (Corona sueca)</li>
+                    <li>SGD (Dólar singapurense)</li>
+                </div>
+
+                <div>
+                    <li>THB (Bat)</li>
+                    <li>TRY (Lira turca)</li>
+                    <li>TWD (Dólar taiwanés)</li>
+                    <li>UAH (Grivna)</li>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <div>
+                    <li>USD (Dólar estadounidense)</li>
+                    <li>UYU (Peso uruguayo )</li>
+                    <li>VND (Dong)</li>
+                    <li>ZAR (Rand)</li>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+<footer class="footer">
+    <p class="marca">&copy; Ulman Juan Manuel </p>
+</footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
